@@ -1,0 +1,19 @@
+import {inject} from '@loopback/core';
+import {DefaultCrudRepository} from '@loopback/repository';
+import {DbDataSource} from '../datasources';
+import {User, UserRelations} from '../models';
+
+export class UserRepository extends DefaultCrudRepository<
+  User,
+  typeof User.prototype._id,
+  UserRelations
+  > {
+  //collection: any
+  constructor(
+    @inject('datasources.db') dataSource: DbDataSource,
+  ) {
+    super(User, dataSource);
+    //this.collection = this.dataSource.connector!.client.db(this.dataSource.settings.database).collection(this.modelClass.name)
+
+  }
+}
