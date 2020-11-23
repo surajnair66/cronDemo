@@ -33,10 +33,8 @@ export class CronrtestApplication extends BootMixin(
 
 
     this.component(CronComponent);
-    setTimeout(() => {
-      this.add(createBindingFromClass(MyCronJob));
-      this.component(CronComponent);
-    }, 1);
+
+    this.add(createBindingFromClass(MyCronJob));
     //this.add(createBindingFromClass(MyCronJob));
 
     this.projectRoot = __dirname;

@@ -4,12 +4,12 @@ import {juggler} from '@loopback/repository';
 const config = {
   name: 'db',
   connector: 'mongodb',
-  url: 'mongodb+srv://user_1:user_1_password@cluster0.hw9vm.mongodb.net/cavspn?retryWrites=true&w=majority',
+  url: '',
   host: 'localhost',
   port: 27017,
-  user: 'user_1',
-  password: 'user_1_password',
-  database: 'cavspn',
+  user: '',
+  password: '',
+  database: '',
   useNewUrlParser: true
 };
 

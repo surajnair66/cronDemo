@@ -8,12 +8,12 @@ export class UserdataRepository extends DefaultCrudRepository<
   typeof Userdata.prototype._id,
   UserdataRelations
   > {
-  // collection: any
+  collection: any
   constructor(
     @inject('datasources.db') dataSource: DbDataSource,
   ) {
     super(Userdata, dataSource);
-    // this.collection = this.dataSource.connector!.client.db(this.dataSource.settings.database).collection(this.modelClass.name)
+    this.collection = this.dataSource.connector!.client.db(this.dataSource.settings.database).collection(this.modelClass.name)
 
   }
 }
